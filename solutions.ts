@@ -23,7 +23,7 @@ console.log(result2)
 
 // Problem 3:
 type StringOrNumber = string | number;
-function  checkType (input: StringOrNumber): "String" | "Number"{
+function  checkType (input: StringOrNumber): String | Number{
       if(typeof input === "string"){
             return "String"
       }else{
@@ -31,5 +31,21 @@ function  checkType (input: StringOrNumber): "String" | "Number"{
       }
 }
 const string = checkType("Md Shahid Hossain")
-const number = checkType(23)
+const number = checkType(7)
 console.log(number)
+
+// Problem 4:
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+
+const user = {
+  name: "Md. Shahid Hossain",
+  age: 22,
+};
+
+console.log(getProperty(user, "name")); 
+
+
+// Problem 5:
