@@ -9,8 +9,9 @@ function filterEvenNumbers (numbers: number[]): number[]{
       return evenNumbers
 
 }
-const result1 = filterEvenNumbers([1, 2, 3, 4, 5, 6,8,12,33,44])
+const result1 = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 console.log(result1)
+
 
 
 // Problem 2:
@@ -32,7 +33,10 @@ function  checkType (input: StringOrNumber): String | Number{
 }
 const string = checkType("Md Shahid Hossain")
 const number = checkType(7)
-console.log(number)
+console.log( string, number)
+
+
+
 
 // Problem 4:
 function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
@@ -45,7 +49,7 @@ const user = {
   age: 22,
 };
 
-console.log(getProperty(user, "name")); 
+console.log(getProperty(user, 'name')); 
 
 
 // Problem 5:
@@ -68,6 +72,9 @@ const myBook: Book = {
 }
 const updatedBook = toggleReadStatus(myBook)
 console.log(updatedBook)
+
+
+
 
 // Problem 6:
 class Person {
@@ -95,3 +102,16 @@ class Student extends Person {
 
 const student1 = new Student("Md. Shahid Hossain", 22, "A+");
 console.log(student1.getDetails())
+
+
+
+
+// Problem 6:
+function getIntersection(arr1: number[], arr2: number[]): number[]{
+      const result7 = arr1.filter((num) => arr2.includes(num));
+      return result7
+}
+const a = [1, 2, 3, 4, 5];
+const b = [3, 4, 5, 6, 7];
+
+console.log(getIntersection(a, b));
