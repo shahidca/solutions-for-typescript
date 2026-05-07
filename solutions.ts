@@ -1,4 +1,5 @@
-function filterEvenNumbers (numbers: number[]):number[]{
+// Problem 1:
+function filterEvenNumbers (numbers: number[]): number[]{
       const evenNumbers: number[] = [];
       for( let i = 0; i < numbers.length; i++){
             if(numbers[i] % 2 ===0){
@@ -8,5 +9,27 @@ function filterEvenNumbers (numbers: number[]):number[]{
       return evenNumbers
 
 }
-const result = filterEvenNumbers([1, 2, 3, 4, 5, 6,8,12,33,44])
-console.log(result)
+const result1 = filterEvenNumbers([1, 2, 3, 4, 5, 6,8,12,33,44])
+console.log(result1)
+
+
+// Problem 2:
+function reverseString (str: string): string {
+      const reverseToString = str.split('').reverse().join('');
+      return reverseToString
+}
+const result2 = reverseString("typescript")
+console.log(result2)
+
+// Problem 3:
+type StringOrNumber = string | number;
+function  checkType (input: StringOrNumber): "String" | "Number"{
+      if(typeof input === "string"){
+            return "String"
+      }else{
+            return "Number"
+      }
+}
+const string = checkType("Md Shahid Hossain")
+const number = checkType(23)
+console.log(number)
