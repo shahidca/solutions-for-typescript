@@ -49,3 +49,22 @@ console.log(getProperty(user, "name"));
 
 
 // Problem 5:
+interface Book {
+      title: string;
+      author: string;
+      publishedYear: number;
+}
+
+function toggleReadStatus(book: Book): Book & {isRead: boolean}{
+      return {
+            ...book,
+            isRead: true,
+      }
+}
+const myBook: Book = {
+      title: "problem solving",
+      author: "Md. Shahid Hossain",
+      publishedYear: 2026
+}
+const updatedBook = toggleReadStatus(myBook)
+console.log(updatedBook)
